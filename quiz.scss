@@ -1,0 +1,222 @@
+* {
+  user-select: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  .game-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    header {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .quiz-zone {
+      padding: 1rem;
+      width: 800px;
+      height: 500px;
+
+      display: grid;
+      grid-template-rows: 0.2fr 1fr;
+      .quiz {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem;
+        border: 1px solid lightblue;
+        background-color: #efed40;
+        span {
+          font-size: 30px;
+          border: 1px solid black;
+          padding: 0.5rem;
+          &:not(:nth-child(2)) {
+            background-color: red;
+            color: #fff;
+          }
+        }
+      }
+      .answers {
+        display: flex;
+        flex-direction: column;
+
+        .row {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          height: 50%;
+
+          .answer {
+            font-size: 40px;
+            background-color: lightblue;
+            padding: 0.5rem;
+            cursor: pointer;
+            transition: transform 0.3s linear;
+            &:active {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+    }
+
+    .points {
+      width: 1200px;
+      height: 50px;
+      display: flex;
+      column-gap: 5px;
+      border: 1px solid lightblue;
+      padding: 0.5rem;
+      .point {
+        width: 50px;
+        color: #fff;
+        &--success {
+          background-color: green;
+        }
+        &--fail {
+          background-color: red;
+        }
+        &--timeout {
+          background-color: black;
+        }
+      }
+    }
+  }
+}
+
+
+.hidden {
+  display: none !important;
+}
+
+.winner {
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: rgb(90, 237, 90);
+}
+.loser {
+  font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: rgb(255, 0, 0);
+}
+
+
+.login{
+  .user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    input{
+      border: none;
+      outline: none;
+      border-bottom: 1px solid rgb(122, 122, 122);
+      width: 100%;
+      padding: 10px;
+      &:focus{
+      border-bottom: 2px solid #000;
+
+      }
+    }
+    .loginBtn{
+      background: #00B533;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.level {
+
+  .levelModal {
+    background: #fff;
+    width: 25%;
+    height: 70%;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    .user-message {
+      text-align: center;
+      
+      font-family: sans-serif;
+      color: #00cd63;
+      line-height: 50px;
+    }
+    .btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 50%;
+      .level-btn {
+        background: #fff;
+        border-radius: 8px;
+        padding: 10px;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .easy {
+        color: #00cd63;
+        border: 1px solid #009347;
+        &:hover {
+          background: #00cd63;
+        }
+      }
+      .medium {
+        color: #0000ff;
+        border: 1px solid #0000ff;
+        &:hover {
+          background: #5656f8;
+        }
+      }
+      .hard {
+        color: #ff0000;
+        border: 1px solid #ff0008;
+        &:hover {
+          background: #f85656;
+        }
+      }
+    }
+  }
+}
+
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #fff;
+  width: 25%;
+  height: 70%;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}

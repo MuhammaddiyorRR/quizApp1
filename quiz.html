@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="quiz.css" />
+    <title>Quiz-app</title>
+  </head>
+  <body>
+    <section class="login modal-bg">
+      <div class="user modal">
+        <input type="text" id="user-name" value="Husniddin" />
+        <input type="text" id="user-surname" value="Jamoliddinov" />
+        <button class="loginBtn">Login</button>
+      </div>
+    </section>
+
+    <section class="level hidden modal-bg">
+      <div class="levelModal">
+        <h2 class="user-message"></h2>
+        <div class="btns">
+          <button class="level-btn easy">easy</button>
+          <button class="level-btn medium">medium</button>
+          <button class="level-btn hard">hard</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="game-zone hidden">
+      <header>
+        <h1 class="quiz-round"></h1>
+        <h1 class="timer"></h1>
+      </header>
+      <div class="quiz-zone">
+        <div class="quiz">
+          <span class="first-number">1</span>
+          <span class="operation">+</span>
+          <span class="second-number">1</span>
+        </div>
+        <div class="answers">
+          <div class="row">
+            <div class="answer">1</div>
+            <div class="answer">2</div>
+          </div>
+          <div class="row">
+            <div class="answer">3</div>
+            <div class="answer">4</div>
+          </div>
+        </div>
+      </div>
+      <div class="points">
+        <!-- <button class="point point--success" disabled>1</button>
+        <button class="point point--fail" disabled>2</button>
+        <button class="point point--timeout" disabled>3</button> -->
+      </div>
+    </section>
+  </body>
+  <script type="module" src="./quiz.js"></script>
+</html>
